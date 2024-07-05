@@ -1,0 +1,73 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css" />
+    <script
+      src="https://kit.fontawesome.com/c9847fde13.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body
+    class="flex items-center justify-center h-screen bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"
+  >
+    <!-- Tela do Spotify -->
+    <div
+      class="bg-zinc-950 w-[400px] mx-auto rounded-2xl min-h-[520px] shadow-sm border border-black/20 relative"
+    >
+      <!-- Musica e dados -->
+      <div class="flex flex-col items-center p-5">
+        <img
+          class="w-[300px] h-[300px] mt-2"
+          src="./images/coldplay.jpeg"
+          alt=""
+        />
+        <div class="w-[300px] p-1 description">
+          <h2 class="mb-1 text-zinc-300">Nome da Musíca</h2>
+          <i class="text-zinc-300">Autor</i>
+        </div>
+      </div>
+
+      <!-- Duração e player -->
+      <div class="w-[300px] mt-0 relative mx-auto">
+        <!-- Barra de progresso -->
+        <div class="w-full h-1 bg-zinc-900 flex items-center relative">
+          <!-- Bolinha indicadora -->
+          <div class="w-5 h-5 bg-zinc-400 rounded-[50%] absolute left-0"></div>
+          <progress class="h-1 w-full bg-zinc-900" value="0" max="1"></progress>
+        </div>
+
+        <!-- Controles de tempo -->
+        <div
+          class="absolute bottom-[-20px] left-0 w-full flex justify-between mb-[-10px]"
+        >
+          <p class="inicio text-zinc-300">0:00</p>
+          <p class="fim text-zinc-300">3:40</p>
+        </div>
+      </div>
+
+      <!-- Player -->
+      <div class="flex justify-around items-center mt-8">
+        <!-- Ícones Font Awesome -->
+        <i
+          class="fa-solid fa-backward-step fa-2x text-gray-300 hover:text-green-500 back-button"
+        ></i>
+        <i
+          class="fa-solid fa-circle-play fa-3x text-gray-300 hover:text-green-500 play-button"
+        ></i>
+        <i
+          class="fa-solid fa-circle-pause fa-3x text-gray-300 hover:text-green-500 pause-button"
+          style="display: none"
+        ></i>
+        <i
+          class="fa-solid fa-forward-step fa-2x text-gray-300 hover:text-green-500 next-button"
+        ></i>
+      </div>
+
+      <!-- Áudio -->
+      <audio src="./music/Coldplay - A sky of full stars.mpeg"></audio>
+    </div>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
